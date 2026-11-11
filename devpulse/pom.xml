@@ -75,9 +75,67 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <testExcludes>
+                        <!-- Milestone 2: Auth & Session Management -->
+                        <testExclude>**/servlet/**</testExclude>
+                        <!-- Milestone 3: JPA Persistence Layer -->
+                        <testExclude>**/repository/**</testExclude>
+                        <testExclude>**/service/**</testExclude>
+                        <!-- Milestone 4: MVC, Validation & JSP Views -->
+                        <testExclude>**/controller/WebController*</testExclude>
+                        <testExclude>**/util/**</testExclude>
+                        <!-- Milestone 5: RESTful API Layer -->
+                        <testExclude>**/controller/ApiController*</testExclude>
+                        <!-- Milestone 6: E2E Integration & Hardening -->
+                        <testExclude>**/DevPulseE2EWorkflowTest.java</testExclude>
+                    </testExcludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>**/servlet/**</exclude>
+                        <exclude>**/repository/**</exclude>
+                        <exclude>**/service/**</exclude>
+                        <exclude>**/controller/**</exclude>
+                        <exclude>**/util/**</exclude>
+                        <exclude>**/DevPulseE2EWorkflowTest.java</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>full-suite</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <testExcludes combine.self="override"/>
+                        </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <excludes combine.self="override"/>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
