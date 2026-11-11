@@ -1,0 +1,19 @@
+# Teamwork and agents internal state
+.agents/
+
+# Maven build outputs
+target/
+**/target/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+.settings/
+.project
+.classpath
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
