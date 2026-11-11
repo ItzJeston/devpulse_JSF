@@ -56,6 +56,18 @@ set ERROR_CODE=0
 @REM To isolate internal variables from possible post scripts, we use another setlocal
 @setlocal
 
+@REM Auto-detect Java 21 JDK on host system if JAVA_HOME is unset or invalid
+if "%JAVA_HOME%" == "" (
+    if exist "C:\Users\jesto\.jdks\jbr-21.0.11\bin\java.exe" (
+        set "JAVA_HOME=C:\Users\jesto\.jdks\jbr-21.0.11"
+    )
+)
+if not exist "%JAVA_HOME%\bin\javac.exe" (
+    if exist "C:\Users\jesto\.jdks\jbr-21.0.11\bin\javac.exe" (
+        set "JAVA_HOME=C:\Users\jesto\.jdks\jbr-21.0.11"
+    )
+)
+
 @REM ==== START VALIDATION ====
 if not "%JAVA_HOME%" == "" goto OkJHome
 
