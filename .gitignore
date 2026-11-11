@@ -4,6 +4,8 @@
 # Maven build outputs
 target/
 **/target/
+classpath.txt
+**/classpath.txt
 
 # IDE files
 .idea/

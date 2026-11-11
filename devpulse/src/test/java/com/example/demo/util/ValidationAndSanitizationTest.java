@@ -332,7 +332,7 @@ public class ValidationAndSanitizationTest {
     // 5. EMAIL REGEX VALIDATION: ^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$ (Feature 19)
     // =========================================================================
     @Nested
-    @DisplayName("Email Format Regex Validation (^[\w.-]+@[\w.-]+\\.[a-zA-Z]{2,}$)")
+    @DisplayName("Email Format Regex Validation (^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$)")
     class EmailRegexValidationTests {
 
         @ParameterizedTest
