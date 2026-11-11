@@ -1,6 +1,10 @@
 # Teamwork and agents internal state
 .agents/
 
+# Compiled Java class files
+*.class
+**/*.class
+
 # Maven build outputs
 target/
 **/target/
