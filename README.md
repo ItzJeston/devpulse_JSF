@@ -72,17 +72,6 @@ Instead of hiding fundamental concepts behind high-level abstraction frameworks,
                                        └───────────────────────────┘
 ```
 
-| Lab Experiment | Syllabus Focus | DevPulse Implementation Highlight | Strict Constraint Respected |
-|---|---|---|---|
-| **Exp 1a** | Servlet Lifecycle & Diagnostics | `/SessionServlet?action=info` exposes Session ID, Creation Timestamp, and Last Accessed Timestamp. | Pure `HttpServlet` without framework interception. |
-| **Exp 1b** | Manual Session Tracking & RBAC | `SessionServlet` handles login, binds `username`, `role` (`STUDENT`, `REVIEWER`), session fixation protection, and invalidation on `/SessionServlet?action=logout`. | **Zero Spring Security.** |
-| **Exp 2a** | JSP Form Rendering & Formatting | `submit_snippet.jsp` and `submit_result.jsp` using scriptlets (`<% %>`) and expressions (`<%= %>`); metadata formatting composite strings. | Traditional JSP + Servlet execution. |
-| **Exp 2b** | Server-Side Regex Validation & XSS Defense | `ValidationUtil` validates USN (`^NNM\d{2}CS\d{3}$`), name, experiment bounds (1–10), and language. `SanitizationUtil` replaces `<`, `>`, `&`, `"`, `'` with HTML entities. | **Zero Hibernate Validator (`@Valid`).** |
-| **Exp 3** | Raw JDBC Operations & Role Dashboards | `DBUtil` connection pooling and `UserDAO` queries for credential validation; `dashboard.jsp` with role-restricted UI elements. | Raw JDBC side-by-side with JPA. |
-| **Exp 4** | Spring Data JPA Persistence | `Snippet` JPA entity with identity generation and `@Lob` code storage; `SnippetRepository` extending `JpaRepository`; `SnippetManager` service. | Enterprise JPA ORM standards. |
-| **Exp 5** | RESTful Web Services | `ApiController` exposing `/api/snippets` with GET, POST, PUT, DELETE, and HTTP status codes (200 OK, 201 CREATED, 404 NOT FOUND). | Clean REST API with JSON payloads. |
-
----
 
 ## 📂 Project Structure
 
