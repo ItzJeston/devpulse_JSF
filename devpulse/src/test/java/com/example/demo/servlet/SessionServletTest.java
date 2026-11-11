@@ -529,7 +529,7 @@ public class SessionServletTest {
 
         @Test
         @DisplayName("F9 [Tier 2]: Diagnostics without active session handled gracefully without NPE")
-        void testSessionInfo_NullSessionHandling() {
+        void testSessionInfo_NullSessionHandling() throws Exception {
             request.setSession(null);
             request.setParameter("action", "info");
 

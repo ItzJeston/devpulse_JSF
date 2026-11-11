@@ -79,8 +79,6 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <testExcludes>
-                        <!-- Milestone 2: Auth & Session Management -->
-                        <testExclude>**/servlet/**</testExclude>
                         <!-- Milestone 3: JPA Persistence Layer -->
                         <testExclude>**/repository/**</testExclude>
                         <testExclude>**/service/**</testExclude>
@@ -99,7 +97,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <excludes>
-                        <exclude>**/servlet/**</exclude>
                         <exclude>**/repository/**</exclude>
                         <exclude>**/service/**</exclude>
                         <exclude>**/controller/**</exclude>
