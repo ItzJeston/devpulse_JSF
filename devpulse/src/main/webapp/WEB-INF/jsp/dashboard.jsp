@@ -5,27 +5,28 @@
 <head>
     <meta charset="UTF-8">
     <title>DevPulse - Dashboard</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; margin: 0; padding: 20px; }
-        .header { background: #2c3e50; color: #fff; padding: 15px 25px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; }
-        .user-info { font-size: 14px; }
-        .nav-links a { color: #ecf0f1; text-decoration: none; margin-left: 15px; font-weight: 600; padding: 6px 12px; border-radius: 4px; background: rgba(255,255,255,0.15); }
-        .nav-links a:hover { background: rgba(255,255,255,0.3); }
-        .content { margin-top: 25px; }
-        .snippet-card { background: #fff; border-radius: 6px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
-        .snippet-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px; }
-        .badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; color: #fff; }
-        .badge-pending { background: #f39c12; }
-        .badge-approved { background: #27ae60; }
-        .badge-revision { background: #e74c3c; }
-        .badge-lang { background: #34495e; }
-        pre { background: #2d3436; color: #dfe6e9; padding: 15px; border-radius: 4px; overflow-x: auto; font-family: 'Consolas', monospace; font-size: 13px; }
-        .actions { margin-top: 15px; display: flex; gap: 10px; }
-        .btn { padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 13px; font-weight: 600; }
-        .btn-primary { background: #2980b9; color: #fff; }
-        .btn-danger { background: #c0392b; color: #fff; }
-        .review-box { background: #f1f2f6; padding: 10px; border-radius: 4px; margin-top: 10px; font-size: 13px; }
-    </style>
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6W2Rk5i1NQ9V+8WfLjD3e9e8I4iZs4C5p5c8rKqV4g3Y" crossorigin="anonymous">
+<style>
+  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f8f9fa; padding: 20px; }
+  .header { background: #2c3e50; color: #fff; padding: 15px 25px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; }
+  .user-info { font-size: 14px; }
+  .nav-links a { color: #ecf0f1; text-decoration: none; margin-left: 15px; font-weight: 600; padding: 6px 12px; border-radius: 4px; background: rgba(255,255,255,0.15); }
+  .nav-links a:hover { background: rgba(255,255,255,0.3); }
+  .content { margin-top: 25px; }
+  .snippet-card { background: #fff; border-radius: 6px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+  .snippet-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px; }
+  .badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; color: #fff; }
+  .badge-pending { background: #f39c12; }
+  .badge-approved { background: #27ae60; }
+  .badge-revision { background: #e74c3c; }
+  .badge-lang { background: #34495e; }
+  pre { background: #2d3436; color: #dfe6e9; padding: 15px; border-radius: 4px; overflow-x: auto; font-family: 'Consolas', monospace; font-size: 13px; }
+  .actions { margin-top: 15px; display: flex; gap: 10px; }
+  .btn-primary { background: #2980b9; color: #fff; }
+  .btn-danger { background: #c0392b; color: #fff; }
+  .review-box { background: #f1f2f6; padding: 10px; border-radius: 4px; margin-top: 10px; font-size: 13px; }
+</style>
 </head>
 <body>
 <%

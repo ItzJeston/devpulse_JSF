@@ -4,20 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>DevPulse - Login</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-        .card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 360px; }
-        h2 { text-align: center; color: #2c3e50; margin-top: 0; }
-        .subtitle { text-align: center; color: #7f8c8d; font-size: 13px; margin-bottom: 20px; }
-        .alert-error { background: #fde8e8; color: #c0392b; padding: 10px; border-radius: 4px; margin-bottom: 15px; font-size: 13px; text-align: center; }
-        .alert-success { background: #e8f8f5; color: #27ae60; padding: 10px; border-radius: 4px; margin-bottom: 15px; font-size: 13px; text-align: center; }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 13px; color: #34495e; }
-        input[type="text"], input[type="password"] { width: 100%; box-sizing: border-box; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
-        button { width: 100%; padding: 10px; background: #3498db; color: #fff; border: none; border-radius: 4px; font-size: 15px; font-weight: bold; cursor: pointer; transition: background 0.2s; }
-        button:hover { background: #2980b9; }
-        .hint { margin-top: 20px; background: #eef2f7; padding: 10px; border-radius: 4px; font-size: 11px; color: #555; }
-    </style>
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6W2Rk5i1NQ9V+8WfLjD3e9e8I4iZs4C5p5c8rKqV4g3Y" crossorigin="anonymous">
+<style>
+  body { background: #f0f2f5; }
+  .login-card { max-width: 380px; margin: auto; margin-top: 10vh; }
+</style>
 </head>
 <body>
 <div class="card">
