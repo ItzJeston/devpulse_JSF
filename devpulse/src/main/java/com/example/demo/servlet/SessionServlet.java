@@ -55,7 +55,7 @@ public class SessionServlet extends HttpServlet {
      * - Redirection to /dashboard on success or /login?error=true on failure
      */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
@@ -100,7 +100,7 @@ public class SessionServlet extends HttpServlet {
      * - default: redirects to /dashboard if authenticated, else /login
      */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String action = request.getParameter("action");
 
