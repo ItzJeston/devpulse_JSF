@@ -79,9 +79,6 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <testExcludes>
-                        <!-- Milestone 3: JPA Persistence Layer -->
-                        <testExclude>**/repository/**</testExclude>
-                        <testExclude>**/service/**</testExclude>
                         <!-- Milestone 4: MVC, Validation & JSP Views -->
                         <testExclude>**/controller/WebController*</testExclude>
                         <testExclude>**/util/**</testExclude>
@@ -97,8 +94,6 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <excludes>
-                        <exclude>**/repository/**</exclude>
-                        <exclude>**/service/**</exclude>
                         <exclude>**/controller/**</exclude>
                         <exclude>**/util/**</exclude>
                         <exclude>**/DevPulseE2EWorkflowTest.java</exclude>
